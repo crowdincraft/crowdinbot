@@ -11,3 +11,10 @@
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 token: <your bot token>
+
+# A list of user IDs for owner only commands.
+# Optional; empty by default.
+owners:
+  - <string>
+  - <string>
+  - ...

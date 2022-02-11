@@ -1,3 +1,6 @@
 # General settings
 
 debug: false
+
+owners:
+  - '87225001874325504' # urielsalis

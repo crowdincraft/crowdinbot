@@ -24,7 +24,9 @@
 </p>
 
 ## About the project
-Description here
+Description here  
+
+This bot is based on the work done for [Mojira-Discord-Bot](https://github.com/mojira/mojira-discord-bot)
 
 ## Usage
 If you want to tinker around with the project on your local PC or run your own instance of the bot, you can simply go ahead!

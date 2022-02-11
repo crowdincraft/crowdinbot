@@ -10,10 +10,12 @@ function getOrDefault<T>( configPath: string, defaultValue: T ): T {
 export default class BotConfig {
 	public static debug: boolean;
 	private static token: string;
+	public static owners: string[];
 
 	public static init(): void {
 		this.debug = getOrDefault( 'debug', false );
 		this.token = config.get( 'token' );
+		this.owners = getOrDefault( 'owners', [] );
 	}
 
 	public static async login( client: Client ): Promise<boolean> {

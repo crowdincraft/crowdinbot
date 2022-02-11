@@ -1,9 +1,12 @@
 import { Client, Intents } from 'discord.js';
 import * as log4js from 'log4js';
 import BotConfig from './BotConfig';
+import EventRegistry from "./events/EventRegistry";
+import ErrorEventHandler from "./events/discord/ErrorEventHandler";
+import MessageEventHandler from "./events/message/MessageEventHandler";
 
-export default class MojiraBot {
-	public static logger = log4js.getLogger( 'MojiraBot' );
+export default class CrowdinBot {
+	public static logger = log4js.getLogger( 'CrowdinBot' );
 
 	public static client: Client = new Client( {
 		partials: ['MESSAGE', 'REACTION', 'USER'],
@@ -23,13 +26,13 @@ export default class MojiraBot {
 		process.on( 'SIGTERM', async () => {
 			this.logger.info( 'The bot process has been terminated (SIGTERM).' );
 
-			await MojiraBot.shutdown();
+			await CrowdinBot.shutdown();
 		} );
 
 		process.on( 'SIGINT', async () => {
 			this.logger.info( 'The bot process has been terminated (SIGINT).' );
 
-			await MojiraBot.shutdown();
+			await CrowdinBot.shutdown();
 		} );
 
 		try {
@@ -41,6 +44,18 @@ export default class MojiraBot {
 				throw Error( 'Null user!' );
 			}
 			this.logger.info( `CrowdinBot has been started successfully. Logged in as ${ this.client.user.tag }` );
+
+			// Register events.
+			EventRegistry.setClient( this.client );
+			EventRegistry.add( new ErrorEventHandler() );
+			EventRegistry.add( new MessageEventHandler( this.client.user.id ) );
+
+			try {
+				await this.client.user.setActivity( '!crowdin help' );
+			} catch ( error ) {
+				CrowdinBot.logger.error( error );
+			}
+
 		} catch ( err ) {
 			this.logger.error( `CrowdinBot could not be started: ${ err }` );
 			await this.shutdown();

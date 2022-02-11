@@ -1,19 +1,14 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "target": "es2016",
+    "target": "ES2016",
+    "module": "commonjs",
     "lib": [
       "es2020"
     ],
-    "module": "commonjs",
-    "resolveJsonModule": true,
-    "allowJs": true,
-    "checkJs": true,
-    "outDir": "bin",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "skipLibCheck": true
-  }
+    "outDir": "./bin",
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
