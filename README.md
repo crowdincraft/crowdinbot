@@ -49,7 +49,7 @@ git clone https://github.com/crowdincraft/crowdinbot.git
 In order to install the dependencies, simply use this command:
 
 ```
-yarn install
+python3 -m pip install -r requirements.txt
 ```
 
 ### Configuration
@@ -69,7 +69,7 @@ An overview / documentation of all config options can be found in `template.yml`
 For testing or development purposes, it is recommended to run the bot using the following command:
 
 ```
-NODE_ENV=<deployment> yarn run bot
+TODO
 ```
 
 where `<deployment>` is the name of a deployment configuration (`main` or `beta`).
@@ -77,36 +77,21 @@ where `<deployment>` is the name of a deployment configuration (`main` or `beta`
 #### Deployment
 To deploy the bot, you need to run the following command:
 
-```
-./start.sh <deployment>
-```
-
-where `<deployment>` is the name of a deployment configuration (`main` or `beta`).
-
-Note that the bot is started in a detached screen, which means you won't see any output and the bot is running in the background.
-
-You can stop the bot with `./stop.sh <deployment>` or restart it with `./restart.sh <deployment>`.
+###### TODO
 
 ### Minimal bot permissions
-For the bot to function properly, the minimal Discord permissions bitfield is `2415945808`.
+
+For the bot to function properly, the minimal Discord permissions bitfield is `TODO`.
 
 ## Built with
 
 This project depends on the following projects, thanks to every developer who makes their code open-source! :heart:
 
-- [discord.js](https://github.com/discordjs/discord.js/)
-- [ESLint](https://github.com/eslint/eslint)
-- [JS-YAML](https://github.com/nodeca/js-yaml)
-- [log4js](https://github.com/log4js-node/log4js-node)
-- [node-config](https://github.com/lorenwest/node-config)
-- [TypeScript](https://github.com/Microsoft/TypeScript/)
-- [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint/)
-
-...and of course all the typings from [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/)!
+###### TODO
 
 ## Contributing
 
-You're very welcome to contribute to this project! Please note that this project uses [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint/) to ensure consistent code, you can execute `npm run lint` to fix lint warnings and errors automatically.
+###### TODO
 
 ## License
 
