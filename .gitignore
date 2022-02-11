@@ -1,0 +1,13 @@
+bin
+node_modules
+
+.vscode/*
+.idea/*
+.history
+**/.DS_Store
+
+**/*.log
+settings.json
+config/local.yml
+config/local-*.yml
+tsconfig.tsbuildinfo

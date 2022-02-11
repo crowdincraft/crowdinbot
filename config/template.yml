@@ -1,0 +1,8 @@
+# Settings template / documentation
+
+# Whether or not the bot is in debug mode.
+# Optional; false by default.
+debug: <boolean>
+
+# Your bot token used to log in to Discord with the bot.
+token: <string>
