@@ -1,9 +1,9 @@
 import { Client, Intents } from 'discord.js';
 import * as log4js from 'log4js';
 import BotConfig from './BotConfig';
-import EventRegistry from "./events/EventRegistry";
-import ErrorEventHandler from "./events/discord/ErrorEventHandler";
-import MessageEventHandler from "./events/message/MessageEventHandler";
+import EventRegistry from './events/EventRegistry';
+import ErrorEventHandler from './events/discord/ErrorEventHandler';
+import MessageEventHandler from './events/message/MessageEventHandler';
 
 export default class CrowdinBot {
 	public static logger = log4js.getLogger( 'CrowdinBot' );
