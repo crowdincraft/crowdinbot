@@ -12,6 +12,8 @@
 
 token: <your bot token>
 
+prefix: <your bot prefix>
+
 # A list of user IDs for owner only commands.
 # Optional; empty by default.
 owners:

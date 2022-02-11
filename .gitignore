@@ -10,3 +10,4 @@ settings.json
 config/local.yml
 config/local-*.yml
 config/local.yaml
+*__pycache__*
